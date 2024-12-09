@@ -7,8 +7,10 @@ package hu.szamalk;
 
 import hu.szamalk.model.Tábla;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Tábla obj = new Tábla('#');
         System.out.println(obj.Megjelenit());
 //        System.out.println(obj.UresOszlop(2));
@@ -17,6 +19,7 @@ public class Main {
         System.out.println("9. feladat: Üres oszlopok és sorok száma: ");
         System.out.println("Oszlopok: " + obj.UresOszlopokSzama());
         System.out.println("Sorok: " + obj.UresSorokSzama());
+        obj.fajlbaIras();
     }
 }
 

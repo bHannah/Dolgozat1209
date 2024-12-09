@@ -1,5 +1,8 @@
 package hu.szamalk.model;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 
 public class Tábla {
@@ -80,5 +83,16 @@ public class Tábla {
             }
         }
         return szamlalo;
+    }
+
+    public void fajlbaIras() throws IOException {
+        String eleresiUtvonal = "src/main/java/hu/szamalk/model/tablak64";
+        try(BufferedWriter iras = new BufferedWriter(new FileWriter(eleresiUtvonal))){
+            for (int db = 0; db < 63; db++) {
+                this.Elhelyez(i);
+                iras.write(this.Megjelenit());
+                iras.newLine();
+            }
+        }
     }
 }
