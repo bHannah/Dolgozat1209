@@ -31,5 +31,16 @@ public class Tábla {
         return s;
     }
 
+    public void Elhelyez(int N){
+        Random rnd = new Random();
+        for (int i = 0; i < N; i++) {
+            int oszlop = rnd.nextInt();
+            int sor = rnd.nextInt();
+            if(T[oszlop][sor] != UresCella){
+                T[oszlop][sor] = 'K';
+            }
+        }
+    }
+
     
 }
