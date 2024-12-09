@@ -20,5 +20,16 @@ public class Tábla {
     }
 
     //tagfgv-k:
+    public String Megjelenit(){
+        String s = "";
+        for (int i = 0; i < this.T.length; i++) {
+            for (int j = 0; j < this.T[i].length; j++) {
+                s += this.T[i][j];
+            }
+            s += "\n";
+        }
+        return s;
+    }
 
+    
 }
