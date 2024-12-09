@@ -54,7 +54,7 @@ public class Tábla {
 
     public boolean UresSor(int sor){
         int szamlalo = 0;
-        for (int i = 0; i < T.length; i++) {
+        for (int i = 0; i < T[sor].length; i++) {
             if (T[sor][i] == UresCella) {
                 szamlalo += 1;
             }
@@ -62,5 +62,23 @@ public class Tábla {
         return szamlalo != T.length;
     }
 
-    
+    public int UresSorokSzama(){
+        int szamlalo = 0;
+        for (int i = 0; i < T.length; i++) {
+            if(!UresSor(i)){
+                szamlalo += 1;
+            }
+        }
+        return szamlalo;
+    }
+
+    public int UresOszlopokSzama(){
+        int szamlalo = 0;
+        for (int i = 0; i < T.length; i++) {
+            if(!UresOszlop(i)) {
+                szamlalo += 1;
+            }
+        }
+        return szamlalo;
+    }
 }
