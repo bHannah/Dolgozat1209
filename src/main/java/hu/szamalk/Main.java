@@ -11,10 +11,12 @@ public class Main {
     public static void main(String[] args) {
         Tábla obj = new Tábla('#');
         System.out.println(obj.Megjelenit());
-        System.out.println(obj.UresOszlop(2));
-        System.out.println(obj.UresSor(3));
-        System.out.println(obj.UresOszlopokSzama());
-        System.out.println(obj.UresSorokSzama());
+//        System.out.println(obj.UresOszlop(2));
+//        System.out.println(obj.UresSor(3));
+
+        System.out.println("9. feladat: Üres oszlopok és sorok száma: ");
+        System.out.println("Oszlopok: " + obj.UresOszlopokSzama());
+        System.out.println("Sorok: " + obj.UresSorokSzama());
     }
 }
 
