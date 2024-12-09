@@ -13,6 +13,8 @@ public class Main {
         System.out.println(obj.Megjelenit());
         obj.Elhelyez(8);
         System.out.println(obj.Megjelenit());
+        System.out.println(obj.UresOszlop(2));
+        System.out.println(obj.UresSor(3));
     }
 }
 

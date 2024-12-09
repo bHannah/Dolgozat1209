@@ -36,10 +36,30 @@ public class Tábla {
         for (int i = 0; i < N; i++) {
             int oszlop = rnd.nextInt();
             int sor = rnd.nextInt();
-            if(T[oszlop][sor] != UresCella){
-                T[oszlop][sor] = 'K';
+            if(T[sor][oszlop] != UresCella){
+                T[sor][oszlop] = 'K';
             }
         }
+    }
+
+    public boolean UresOszlop(int oszlop){
+        int szamlalo = 0;
+        for (int i = 0; i < T.length; i++) {
+            if (T[i][oszlop] == UresCella) {
+                szamlalo += 1;
+            }
+        }
+        return szamlalo != T.length;
+    }
+
+    public boolean UresSor(int sor){
+        int szamlalo = 0;
+        for (int i = 0; i < T.length; i++) {
+            if (T[sor][i] == UresCella) {
+                szamlalo += 1;
+            }
+        }
+        return szamlalo != T.length;
     }
 
     
