@@ -22,4 +22,5 @@ public class Main {
         obj.fajlbaIras();
     }
 }
+//VÉGE
 
