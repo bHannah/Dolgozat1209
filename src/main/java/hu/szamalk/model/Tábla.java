@@ -89,7 +89,7 @@ public class Tábla {
         String eleresiUtvonal = "src/main/java/hu/szamalk/model/tablak64";
         try(BufferedWriter iras = new BufferedWriter(new FileWriter(eleresiUtvonal))){
             for (int db = 0; db < 63; db++) {
-                this.Elhelyez(i);
+                this.Elhelyez(db);
                 iras.write(this.Megjelenit());
                 iras.newLine();
             }
